@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.vani.web.mapper.TrHistoryMapper">
+    <select id="findTrHistories" parameterType="TrHistoryListDto" resultType="TrHistory">
+        SELECT
+        TR_DT,
+        INS_TM,
+        ORG_C,
+        DEBIT_BNK_ID,
+        SVC_ID,
+        GBLID,
+        TRAN_AM,
+        RSP_C,
+        TRPRC_STSC,
+        RSP_TM,
+        CRD_BNK_ID,
+        CLI_MSG_ID
+        FROM TB_RT_VH_TR
+        <where>
+            ORG_C = #{orgC}
+            <if test="svcId != null and svcId != ''">
+                AND SVC_ID = #{svcId}
+            </if>
+            <if test="fromDate != null and fromDate != '' and toDate != null and toDate != ''">
+                AND TR_DT BETWEEN REPLACE(#{fromDate}, '-', '') AND REPLACE(#{toDate}, '-', '')
+            </if>
+            <if test="debitBnkId != null and debitBnkId != ''">
+                AND DEBIT_BNK_ID = #{debitBnkId}
+            </if>
+            <if test="debitRsrcNum != null and debitRsrcNum != ''">
+                AND DEBIT_RSRC_NUM LIKE '%'||#{debitRsrcNum}||'%'
+            </if>
+            <if test="crdBnkId != null and crdBnkId != ''">
+                AND CRD_BNK_ID = #{crdBnkId}
+            </if>
+            <if test="crdRsrcNum != null and crdRsrcNum != ''">
+                AND CRD_RSRC_NUM LIKE '%'||#{crdRsrcNum}||'%'
+            </if>
+            <if test="cliMsgId != null and cliMsgId != ''">
+                AND CLI_MSG_ID LIKE '%'||#{cliMsgId}||'%'
+            </if>
+            <if test="gblid != null and gblid != ''">
+                AND GBLID LIKE '%'||#{gblid}||'%'
+            </if>
+            <if test="tranAm != null and tranAm != ''">
+                AND TRAN_AM LIKE '%'||#{tranAm}||'%'
+            </if>
+            <if test="rspC != null and rspC != ''">
+                AND RSP_C LIKE '%'||#{rspC}||'%'
+            </if>
+            <if test="tmoOcuYn != null and tmoOcuYn != ''">
+                AND TMO_OCU_YN = #{tmoOcuYn}
+            </if>
+            <if test="trprcStsc != null and trprcStsc != ''">
+                AND TRPRC_STSC = #{trprcStsc}
+            </if>
+        </where>
+    </select>
+</mapper>
