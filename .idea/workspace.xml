@@ -43,15 +43,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jameslee/workspace/vani-admin&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;35fa1cab4273f98dfadc5128a84d3ff4&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/jameslee/workspace/vani-admin",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "35fa1cab4273f98dfadc5128a84d3ff4"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.72">
     <configuration name="DataSourceTest.testConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vani-admin" />
@@ -191,7 +192,7 @@
       <workItem from="1677730860065" duration="243000" />
       <workItem from="1677731127549" duration="20000" />
       <workItem from="1677736645600" duration="165000" />
-      <workItem from="1677820959310" duration="3021000" />
+      <workItem from="1677820959310" duration="3357000" />
     </task>
     <servers />
   </component>
